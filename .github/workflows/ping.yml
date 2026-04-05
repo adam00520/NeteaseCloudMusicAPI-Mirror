@@ -1,0 +1,12 @@
+name: Ping Render Service
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping service
+        run: curl https://neteasecloudmusicapi-mirror.onrender.com/search?keywords=%E6%B5%B7%E9%98%94%E5%A4%A9%E7%A9%BA
